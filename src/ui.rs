@@ -1571,7 +1571,8 @@ mod tests {
         assert!(!text
             .iter()
             .any(|(text, _)| matches!(text.as_str(), "ホーム" | "アプリ" | "↑ アプリ")));
-        assert!(text.iter().any(|(text, y)| text == "電話" && *y < 200.0));
+        // The list is sorted by normalized label, so Browser is the first row.
+        assert!(text.iter().any(|(text, y)| text == "Browser" && *y < 200.0));
         launcher.query = "does not exist".into();
         launcher.refreshing = false;
         let empty = frame(&mut launcher, &ctx);
