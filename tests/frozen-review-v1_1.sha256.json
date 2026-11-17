@@ -1,0 +1,6 @@
+{
+  "tests/font_controls_v1.rs": "1731cb0c8ac565acefdf8f7da0d3b4b233a2048ae6a8d6a01df92c30c0ad014a",
+  "tests/review_observers_v1_1.rs": "72e58185a8ad4f7246f5d1bd9c18a3fbe628f6f7079db4d21a08eafbb5938777",
+  "tests/support/visible_v1_1.rs": "c2bc2feb1eb1468ece0eb4dd5612cc41e2173b805585dc7df275f58b8aaeed54",
+  "tests/android_review_v1_1.rs": "0f46b7cbfaf382d9e88b5976f663539e4d925b585b68ed94835316de81e5a4fe"
+}

@@ -1,0 +1,12 @@
+{
+  "tests/nov16_contract.rs": "0fc213321895daea35b0b3145f7761a1ca3feba61218f9d6781721b3905013bb",
+  "tests/legacy-tests.sha256.json": "dad97466d650d1396550a8fd942b851006c1ccb0f6865640c5c55a672c23f653",
+  "examples/check_contracts.rs": "9a6a4a9175857d2d691f234235a8c50f8c2c7e410ecaf6d4c0751f8b852e22b6",
+  "docs/contracts-2026-11-16.md": "ac501143cbdd8d78e1a7919c6ba2a12895520de01a2809c4346e9cee190bdc29",
+  "tests/nov16_ui.rs": "0c10aeface7e3aed2d5a580c1dd38dc3c99705ae43b550ef9b8493ede90de2fc",
+  "examples/widget_e2e.rs": "78dc47c8c6440a9da113739ca17b890b7a617ced9b5f463b90578798c6cbf7ce",
+  "tests/fixtures/widget/AndroidManifest.xml": "741527a4586e88e6ae60b31307c2d55b886d9188a69c0dc6bfb360eeb813bb9e",
+  "tests/fixtures/widget/res/xml/widget.xml": "ece6e5173a481f0230b16bc6f4bb2309089d20da4cb160ee2493f99c83933a74",
+  "tests/fixtures/widget/res/layout/widget.xml": "e6e97d7d1f3ae9721d45e0ce9755660176239f4053547dc98e9e4087c2dc0ce2",
+  "tests/overflow_notice.rs": "90e157f84d57b9f53c65bf3999cd0909b49b84db08889c45422f4a8d16af2d0a"
+}

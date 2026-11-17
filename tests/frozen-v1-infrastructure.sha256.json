@@ -1,0 +1,16 @@
+{
+  "examples/check_v1_contracts.rs": "403647cdbe797a7b060cfdb64682e5b0fad32e38aa8928e10d8d2de048e6febc",
+  "examples/run_acceptance_v1.rs": "7570380ef131eceede88ae33ec29f55fd2fad6095bfc85ceb5b99da68fef9a4a",
+  "examples/save_probe_v1.rs": "e2be776077465a4a07d8409b83f0d73b32e7cdd6c7bb3ed6dcb27e383a36e719",
+  "tests/boundaries_v1.rs": "de221adbf882fd818319b3343c3abc91f41515a7541e952cb3e28ea87ced394b",
+  "tests/storage_faults_v1.rs": "7174f8b7776060062076fbf5932a38feca10b48afdae6013134d4a0413cd103e",
+  "tests/fixtures/v1/storage_fault.rs": "1fa9e8440889a0321fd6cedcf2054f0b70f48d61df841331b08ef4857e5a5d37",
+  "docs/testing-v1-coverage.md": "307776c06f6cffe9f78bcb6ddc5ddc18a17e65e401b555ebe20bc27281e185c0",
+  "tests/navigation_edges_v1.rs": "545ee4200aab5fc61e7f567aa46878348b40a0f28f58b3c42da82f59c22f5d74",
+  "docs/testing-v1-additions.md": "be501b476d8537e82338d068433ad72c2e07cfc03d62edd88b744ec0414bda19",
+  "tests/support/ocr_v1_revision.rs": "62a39439d0859a7ae65a10a7ae67ea511fc1b0ac27e3a6e0562814c722854aef",
+  "tests/ocr_observer_v1.rs": "f309cac6888c3cec53593069ee644b69e01d7742d475f5e93c12f792d3159885",
+  "examples/review_android_observations_v1.rs": "158749d12501ec2d27552f297038d1b34c4d8ec586d5f4ced6815d0b2aad4e54",
+  "examples/diagnose_android_observations_v1.rs": "1e8c0b699f6cc7c79ae35065ac6f8ad5172c533e671e7fe120f20ebe85a9db99",
+  "docs/testing-observation-review.md": "fd219bd47891a02a528ad43ad3771eb44385e26c7062fa2dac5eb279e1ffa832"
+}

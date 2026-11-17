@@ -1,0 +1,97 @@
+{
+  "version": "0.4.0",
+  "date": "2026-11-16",
+  "environment": {
+    "serial": "emulator-5554",
+    "android_api": 35,
+    "abi": "x86_64",
+    "screen_pixels": [
+      720,
+      1280
+    ]
+  },
+  "reference_phone": {
+    "model": "OPPO Reno7 A",
+    "android": 13,
+    "tested": false
+  },
+  "tests": {
+    "legacy": 17,
+    "new_contract": 12,
+    "ui": 4,
+    "overflow_notice": 1,
+    "total_passed": 34,
+    "frozen_tests_unchanged": true
+  },
+  "product_clippy": "passed",
+  "rustfmt": "passed",
+  "android_smoke": {
+    "boot_ready": true,
+    "default_home_return_cycles": 3,
+    "home_window_shown_and_drawn": true,
+    "install": true,
+    "launch": true,
+    "note": "Screenshots require visual review. Emulator timings do not measure phone FPS.",
+    "screenshots": [
+      "01-home.png",
+      "02-drawer.png",
+      "08-return-home.png"
+    ],
+    "serial": "emulator-5554",
+    "status": "passed",
+    "swipe_keeps_launcher_foreground": true,
+    "version": "0.4.0"
+  },
+  "widget_experiment": {
+    "actual_text": true,
+    "delete": true,
+    "fixture": "framework resource-only AppWidgetProvider",
+    "method": "real UI actions and OCR of screenshots",
+    "provider_name": true,
+    "provisional_acceptance": true,
+    "restart": true,
+    "status": "passed"
+  },
+  "widget_acceptance_user_confirmed": false,
+  "distribution": {
+    "apk": "dist/quiet-launcher-0.4.0.apk",
+    "bytes": 3437044,
+    "sha256": "2daf2f97c38f78f33cecc5ad0cccd45e6c2fdaafb6414a8806bcfa246f566072",
+    "zip_contents": [
+      "quiet-launcher.apk"
+    ]
+  },
+  "signer_sha256": "9e4e2b915d1078796aa664cda10f2fd9ec46579e779bc123eeb65341c856330c",
+  "manual_android_observation": [
+    "kamera returns Camera in native input",
+    "one Back from search returns home",
+    "reopened search is empty"
+  ],
+  "not_complete": [
+    "all whole-product acceptance cases",
+    "media session integration",
+    "every Android dialog Back path",
+    "phone frame-time and memory measurement",
+    "widget dynamic updates and general compatibility"
+  ],
+  "source_sha256": {
+    "Cargo.lock": "d822d69932de26593e4dee129999b5457d3ac398e1d5e1a196e6041a6e06e1fa",
+    "Cargo.toml": "63223ffa0e5cfb28a80b139316ce98ce645ecab62a8462148f9c6d1671e23343",
+    "android/res/drawable/ic_launcher.xml": "adcbf694b2ad8bcac1c8721ba95620e512a1280555744c47e01a16c70c1629a6",
+    "src/catalog.rs": "20d8be3c0075665258a482cba045c3679e0ecfa9bb8fd93436a9ab35c0eee8d1",
+    "src/config.rs": "f46c05f984cd5f668cda744d1bc57d146adfb705722b6d4717bf7c135b02d86f",
+    "src/home.rs": "faaae1c496cfd002b2b339927a724d61ef519034d54e2f911148f532f5092b37",
+    "src/lib.rs": "58027d99c695f899fb9f9b323ed3ca6f945cf62ba31028a193df935c6b3d582d",
+    "src/main.rs": "7dab4dce51deec1406ad32d5cdd7ada9b5dae934302b9de084a19e5fb45611bc",
+    "src/mobile.rs": "63f6ec4ad04db2f3d5f57029b452fcd0d80547681f24ca4cd5a04ae4e1c466bc",
+    "src/model.rs": "b419b269d9ce647908826e01712d9bf489d0c533817fa1aa3c5df43f8d26f5a2",
+    "src/platform/android.rs": "dc73d72968fb8e4ad59408078e59407afb68f18b5f8e69b0e16e482c7798b5f8",
+    "src/platform/desktop.rs": "6b55ec5957518ec4f85b14eed6a8b4dd3ebd7192585c8c7ae6dd369fb0387cde",
+    "src/platform/mod.rs": "719db331e3fbabd3f50332396a7a8199515cbe45e137bd16175afd032de56710",
+    "src/search.rs": "f3dc4a7a08cdc53773e3235e709eb8283d0f8c3ca6c411bf1d6ebd4892535147",
+    "src/storage.rs": "ef5d731628de638ef63ef2b559e2053693df0ced58b33bb355b7e0ee2e7c5eba",
+    "src/ui.rs": "6970d3f5a3997402e18b8e84169c1d08984d6df098630580b3937c193d1056ce",
+    "src/usage.rs": "f993e20e660868a8a9a724e05f20bd23ce0150de717c16a88965af6cf71abb2b",
+    "src/weather.rs": "74bd6d958ad30bd671d34d72a6224cc904862e588f8959f9712350b024d51ef4"
+  }
+}

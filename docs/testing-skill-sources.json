@@ -1,0 +1,20 @@
+[
+  {
+    "repo": "obra/superpowers",
+    "path": "skills/test-driven-development",
+    "commit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+    "url": "https://github.com/obra/superpowers/blob/5bf4e78011075bcfc0dc295f0724994cd123ee71/skills/test-driven-development/SKILL.md"
+  },
+  {
+    "repo": "obra/superpowers",
+    "path": "skills/verification-before-completion",
+    "commit": "3be5aad3dd2400ef23b15680969f4bcd3b6d7b8b",
+    "url": "https://github.com/obra/superpowers/blob/3be5aad3dd2400ef23b15680969f4bcd3b6d7b8b/skills/verification-before-completion/SKILL.md"
+  },
+  {
+    "repo": "android/skills",
+    "path": "testing/testing-setup",
+    "commit": "88664edd340aef678a1517617e76e46d67d35527",
+    "url": "https://github.com/android/skills/blob/88664edd340aef678a1517617e76e46d67d35527/testing/testing-setup/SKILL.md"
+  }
+]

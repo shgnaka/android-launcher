@@ -1,0 +1,8 @@
+/target/
+/local.properties
+*.keystore
+*.apk
+.DS_Store
+/.local/
+/.codex-attachments/
+/dist/*.zip

@@ -1,0 +1,41 @@
+{
+  "boot_ready": true,
+  "default_home_return_cycles": 3,
+  "home_window_shown_and_drawn": true,
+  "install": true,
+  "launch": true,
+  "note": "Screenshots require visual review. Emulator timings do not measure phone FPS.",
+  "screenshots": [
+    "01-home.png",
+    "02-drawer.png",
+    "08-return-home.png"
+  ],
+  "serial": "emulator-5554",
+  "status": "passed",
+  "swipe_keeps_launcher_foreground": true,
+  "version": "0.3.0",
+  "visually_reviewed": [
+    "home without navigation headers or app-drawer label",
+    "up swipe opens separate drawer and IME",
+    "inline Camera query and one exact result",
+    "Cam has no partial match",
+    "search query retained with IME hidden",
+    "tap search reopens IME",
+    "pull down at list top returns home",
+    "home background long press opens settings",
+    "existing external widget retained after update and HOME return",
+    "drawer overflow menu opens settings"
+  ],
+  "source_checks": {
+    "tests_passed": 17,
+    "clippy": "passed",
+    "rustfmt": "passed"
+  },
+  "phone_apk": {
+    "version": "0.3.0",
+    "version_code": 16777984,
+    "abi": "arm64-v8a",
+    "signature_verified": true,
+    "same_signer_as_0_2_2": true
+  }
+}

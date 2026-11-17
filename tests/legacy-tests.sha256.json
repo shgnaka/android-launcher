@@ -1,0 +1,9 @@
+{
+  "src/model.rs:0": "4a2e52b3e0f5a52565a93dedb5becaf1b101338165f01a26944d1f7a9b3468c9",
+  "src/config.rs:0": "f589e5514b8cadff7de666db8c01ae7de2700e1c08a86273f953549bec396b5c",
+  "src/ui.rs:0": "852c19482d9b87e7d3acdf280e6107f7ab50d0f86149ae095f17ef0b95ff4ccf",
+  "src/mobile.rs:0": "6839ea7aa07914dda37f92f04f4d0ea299287660be21c37ab9646da05b0718d2",
+  "src/search.rs:0": "1825018b7889bce05eab528b0a64a85ee0da60ffb62dfa99a7446dcf1dd20831",
+  "src/usage.rs:0": "00f7bbc9e176de42c50394453deb24fd03d89d9fe3b9cb8856c6e7a65c4e582b",
+  "src/weather.rs:0": "fa78dee1ee786d3eb4bc93f6eeb070daa2b7043e8bf1cc4a0a58e07289812b3d"
+}

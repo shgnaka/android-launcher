@@ -1,0 +1,244 @@
+{
+  "requirements_version": "1.0",
+  "date": "2026-11-16",
+  "scope_finalized": true,
+  "widget_minimum_confirmed": true,
+  "requirements_count": 54,
+  "acceptance_case_groups": 52,
+  "previous_gaps_resolved": 31,
+  "requirement_to_cases": {
+    "BASE-01": [
+      "A01",
+      "A52"
+    ],
+    "BASE-02": [
+      "A02",
+      "A03",
+      "A48"
+    ],
+    "BASE-03": [
+      "A04"
+    ],
+    "HOME-01": [
+      "A05",
+      "A09",
+      "A19",
+      "A37",
+      "A48"
+    ],
+    "HOME-02": [
+      "A05",
+      "A23",
+      "A46"
+    ],
+    "HOME-03": [
+      "A06"
+    ],
+    "HOME-04": [
+      "A07"
+    ],
+    "HOME-05": [
+      "A07"
+    ],
+    "HOME-06": [
+      "A08"
+    ],
+    "NAV-01": [
+      "A09",
+      "A36"
+    ],
+    "NAV-02": [
+      "A10"
+    ],
+    "NAV-03": [
+      "A02",
+      "A03",
+      "A11"
+    ],
+    "NAV-04": [
+      "A12",
+      "A17",
+      "A36",
+      "A49"
+    ],
+    "LIST-01": [
+      "A05",
+      "A21",
+      "A46"
+    ],
+    "LIST-02": [
+      "A05",
+      "A17"
+    ],
+    "SEARCH-01": [
+      "A13",
+      "A15"
+    ],
+    "SEARCH-02": [
+      "A11",
+      "A13"
+    ],
+    "SEARCH-03": [
+      "A14",
+      "A16"
+    ],
+    "SEARCH-04": [
+      "A15"
+    ],
+    "SEARCH-05": [
+      "A22",
+      "A39"
+    ],
+    "SEARCH-06": [
+      "A14",
+      "A39"
+    ],
+    "INFO-01": [
+      "A25",
+      "A43"
+    ],
+    "INFO-02": [
+      "A25",
+      "A36",
+      "A43"
+    ],
+    "INFO-03": [
+      "A26",
+      "A44"
+    ],
+    "INFO-04": [
+      "A27",
+      "A41"
+    ],
+    "INFO-05": [
+      "A28",
+      "A48"
+    ],
+    "WIDGET-01": [
+      "A29",
+      "A42"
+    ],
+    "WIDGET-02": [
+      "A30",
+      "A50"
+    ],
+    "WIDGET-03": [
+      "A31",
+      "A50"
+    ],
+    "WIDGET-04": [
+      "A30",
+      "A42",
+      "A50"
+    ],
+    "WIDGET-05": [
+      "A40"
+    ],
+    "HIDE-01": [
+      "A16"
+    ],
+    "HIDE-02": [
+      "A16"
+    ],
+    "HIDE-03": [
+      "A08",
+      "A17"
+    ],
+    "HIDE-04": [
+      "A16",
+      "A51"
+    ],
+    "HIDE-05": [
+      "A18"
+    ],
+    "HIDE-06": [
+      "A19",
+      "A46"
+    ],
+    "HIDE-07": [
+      "A19",
+      "A20",
+      "A51"
+    ],
+    "HIDE-08": [
+      "A21"
+    ],
+    "HIDE-09": [
+      "A22",
+      "A23"
+    ],
+    "HIDE-10": [
+      "A24"
+    ],
+    "DATA-01": [
+      "A03",
+      "A04",
+      "A20",
+      "A24",
+      "A28",
+      "A32",
+      "A48"
+    ],
+    "DATA-02": [
+      "A04",
+      "A20",
+      "A32",
+      "A45"
+    ],
+    "DATA-03": [
+      "A33",
+      "A42",
+      "A45",
+      "A51"
+    ],
+    "DATA-04": [
+      "A34",
+      "A52"
+    ],
+    "UI-01": [
+      "A35",
+      "A37",
+      "A49"
+    ],
+    "UI-02": [
+      "A28",
+      "A35",
+      "A49"
+    ],
+    "PERF-01": [
+      "A36",
+      "A47"
+    ],
+    "COMPAT-01": [
+      "A01"
+    ],
+    "FONT-01": [
+      "A37"
+    ],
+    "CACHE-01": [
+      "A38"
+    ],
+    "CACHE-02": [
+      "A38",
+      "A46"
+    ],
+    "CACHE-03": [
+      "A38",
+      "A47"
+    ],
+    "CACHE-04": [
+      "A38",
+      "A45"
+    ]
+  },
+  "all_acceptance_executed": false,
+  "product_changed_this_revision": false,
+  "frozen_tests_modified": false,
+  "frozen_documents": [
+    "docs/requirements.md",
+    "docs/acceptance-plan.md",
+    "docs/test-fixtures-v1.md",
+    "docs/requirements-audit.md",
+    "docs/widget-acceptance-confirmation.md"
+  ]
+}
