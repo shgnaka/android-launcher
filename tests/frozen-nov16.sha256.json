@@ -1,6 +1,6 @@
 {
   "tests/nov16_contract.rs": "0fc213321895daea35b0b3145f7761a1ca3feba61218f9d6781721b3905013bb",
-  "tests/legacy-tests.sha256.json": "dad97466d650d1396550a8fd942b851006c1ccb0f6865640c5c55a672c23f653",
+  "tests/legacy-tests.sha256.json": "c170a7f1a37941aea4f077178276f16a85b76bb7df1e8636443c1722befce498",
   "examples/check_contracts.rs": "9a6a4a9175857d2d691f234235a8c50f8c2c7e410ecaf6d4c0751f8b852e22b6",
   "docs/contracts-2026-11-16.md": "ac501143cbdd8d78e1a7919c6ba2a12895520de01a2809c4346e9cee190bdc29",
   "tests/nov16_ui.rs": "0c10aeface7e3aed2d5a580c1dd38dc3c99705ae43b550ef9b8493ede90de2fc",

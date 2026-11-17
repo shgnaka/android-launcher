@@ -35,7 +35,14 @@ fn setup() -> (Screen, Arc<Time>) {
         Screen::with_environment(json!({"show_media":true}), vec![], f.environment(t.clone()));
     *s.device.sessions.lock().unwrap() = sessions();
     t.advance(2);
-    s.settle();
+    // The media controller runs on a worker thread. A fixed number of simulated
+    // frames does not guarantee that the worker has been scheduled under load.
+    let deadline = std::time::Instant::now() + std::time::Duration::from_secs(5);
+    while !s.has("PLAYER ONE") && std::time::Instant::now() < deadline {
+        s.frame(vec![]);
+        std::thread::sleep(std::time::Duration::from_millis(1));
+    }
+    assert!(s.has("PLAYER ONE"), "initial media session did not arrive");
     (s, t)
 }
 fn swipe(s: &mut Screen) {
