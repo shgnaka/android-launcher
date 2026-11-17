@@ -12,5 +12,6 @@
   "tests/ocr_observer_v1.rs": "f309cac6888c3cec53593069ee644b69e01d7742d475f5e93c12f792d3159885",
   "examples/review_android_observations_v1.rs": "158749d12501ec2d27552f297038d1b34c4d8ec586d5f4ced6815d0b2aad4e54",
   "examples/diagnose_android_observations_v1.rs": "1e8c0b699f6cc7c79ae35065ac6f8ad5172c533e671e7fe120f20ebe85a9db99",
-  "docs/testing-observation-review.md": "fd219bd47891a02a528ad43ad3771eb44385e26c7062fa2dac5eb279e1ffa832"
+  "docs/testing-observation-review.md": "fd219bd47891a02a528ad43ad3771eb44385e26c7062fa2dac5eb279e1ffa832",
+  "tests/drawer_order_revision_v1.rs": "983c8c25b9037675daa48ad9c8b399db9d7fdd97fa9f11dee630c422f7faf5a0"
 }
