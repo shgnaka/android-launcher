@@ -1,8 +1,53 @@
 //! Real Android acceptance. Missing tools/devices are errors, never automatic successes.
+//!
+//! 2026-11-17 revision: A11 and A19 now use the corrected observations already validated in
+//! `tests/android_review_v1_1.rs`. The product was not changed; the old expectations and their
+//! failing results are preserved in `docs/refactor-triage-2026-11-17.md`.
 #[path = "support/android.rs"]
 mod device;
-use anyhow::Result;
+#[path = "support/ocr_v1_revision.rs"]
+mod observer;
+use anyhow::{Context, Result};
 use device::{settings, Android};
+use std::process::Command;
+
+/// Tap the word box of a control instead of the center of the OCR line that may also
+/// contain a neighbouring label. See `tests/support/ocr_v1_revision.rs`.
+fn tap_control(lab: &Android, text: &str) -> Result<()> {
+    lab.wait_text(text)?;
+    let image = lab.image("word-selector.png")?;
+    let ocr = std::env::var("QUIET_TESSERACT")
+        .unwrap_or_else(|_| "/tmp/quiet-ocr/root/usr/bin/tesseract".into());
+    let data = std::env::var("QUIET_TESSDATA")
+        .unwrap_or_else(|_| "/tmp/quiet-ocr/root/usr/share/tesseract-ocr/5/tessdata".into());
+    let result = Command::new(ocr)
+        .arg(&image)
+        .arg("stdout")
+        .args([
+            "--tessdata-dir",
+            &data,
+            "-l",
+            "eng+jpn",
+            "--psm",
+            "11",
+            "tsv",
+        ])
+        .output()?;
+    anyhow::ensure!(result.status.success(), "ENVIRONMENT: OCR failed");
+    std::fs::write(lab.out.join("word-selector.tsv"), &result.stdout)?;
+    let bounds = observer::control_bounds(&String::from_utf8(result.stdout)?, text)?;
+    std::fs::write(
+        lab.out.join("selected-control.json"),
+        serde_json::to_vec(&bounds)?,
+    )?;
+    lab.shell(&[
+        "input",
+        "tap",
+        &((bounds[0] + bounds[2]) / 2).to_string(),
+        &((bounds[1] + bounds[3]) / 2).to_string(),
+    ])?;
+    Ok(())
+}
 #[test]
 fn a02_home_while_searching_resets_to_the_launcher_home() -> Result<()> {
     let lab = Android::new("A02-home", settings())?;
@@ -34,8 +79,23 @@ fn a11_one_back_from_the_real_ime_returns_home_and_clears_search() -> Result<()>
     lab.back()?;
     lab.wait_text("メモ")?;
     lab.drawer()?;
-    lab.wait_text("Camera Tools")?;
-    Ok(())
+    // The query, not an off-screen row, is the contract. Inspect the real native editor.
+    lab.shell(&["uiautomator", "dump", "/data/local/tmp/quiet-a11.xml"])?;
+    let xml = String::from_utf8(lab.shell(&["cat", "/data/local/tmp/quiet-a11.xml"])?)?;
+    std::fs::write(lab.out.join("input-after-back.xml"), &xml)?;
+    let node = xml
+        .split("<node")
+        .filter_map(|n| n.split('>').next())
+        .find(|n| n.contains("class=\"android.widget.EditText\""))
+        .context("native search is missing after reopening")?;
+    anyhow::ensure!(
+        node.contains("text=\"\""),
+        "search query must be empty after Back: {node}"
+    );
+    lab.type_text("Camera%sTools")?;
+    lab.tap_app("Camera Tools")?;
+    lab.dialog_text("FIXTURE CAMERA TOOLS")?;
+    lab.foreground("example.camera")
 }
 #[test]
 fn a05_same_named_apps_have_distinct_identity_and_launch_destinations() -> Result<()> {
@@ -130,17 +190,21 @@ fn a19_hidden_package_is_managed_only_in_the_dedicated_section() -> Result<()> {
     lab.scroll_to("非表示アプリ")?;
     lab.scroll_to("再表示")?;
     lab.wait_text("Camera")?;
-    lab.tap_text("再表示")?;
+    tap_control(&lab, "再表示")?;
+    lab.back()?;
+    lab.wait_text("メモ")?;
+    lab.drawer()?;
+    lab.type_text("Camera%sTools")?;
+    lab.tap_app("Camera Tools")?;
+    lab.dialog_text("FIXTURE CAMERA TOOLS")?;
     anyhow::ensure!(
         lab.saved()?["hidden_packages"]
             .as_array()
             .unwrap()
             .is_empty(),
-        "unhide must persist"
+        "unhide must persist and restore launch"
     );
-    lab.back()?;
-    lab.wait_text("メモ")?;
-    Ok(())
+    lab.foreground("example.camera")
 }
 #[test]
 fn a27_real_media_sessions_have_a_visible_selected_target() -> Result<()> {
