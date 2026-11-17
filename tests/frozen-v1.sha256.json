@@ -17,7 +17,7 @@
   "tests/v1/screens.rs": "2b1796d11d23d1fe9ac76ed5a8aee174324768e458a8ced6e2898a6b037c1e74",
   "tests/v1/weather.rs": "666560d713f953b7868d9fa1a965c43d694ed483ff2de1d94b97b8a91d428985",
   "tests/v1/coordinates.rs": "6bf5ac5bff46b1913e4e123a8981f54d56ed81b8165b8545858f7284db8e1589",
-  "tests/v1/media.rs": "ea3ee6175e59f5bfa20275297be268f407332077c52406c86e6c87ce3dd079dd",
+  "tests/v1/media.rs": "9c652ff9f0a3a9ffffc56e4d3934d9b8ef75d474992e6a7a334814dda07d29bb",
   "tests/apk_requirements_v1.rs": "97be970721364ac711216442f5cd80eee2be6af18c394328bfff761feb667784",
   "tests/android_requirements_v1.rs": "581fe518711fbc3e3b596676ec4283ac52ae29b6208b0c78b460d1723f5cf115",
   "tests/memory_v1.rs": "29a5bf5aa6137d707293b4749c1bcb0e151f416b3d82eee47c0df52c409a445b",
